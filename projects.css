@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  line-height: 1.6;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  background: transparent;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.5rem 2rem;
+  border-radius: 30px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #6a5acd;
+}
+
+/* Projects Section */
+.projects {
+  padding: 5.5rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.projects h2 {
+  text-align: left;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  width: 100%;
+  margin-left: 130px;
+  margin-bottom: -10px;
+}
+
+/* Projects Grid (Same as Skills) */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 cards per row */
+  gap: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  height: 10px;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto; /* Center the grid */
+}
+
+/* Project Card Styles */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  width: 335px;
+  margin-bottom: 10px;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card img {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  width: 300px;
+  height: 200px; 
+  width: 100%; /* Image will take 100% of the container's width */
+  height: auto;
+
+}
+
+
+.tags span {
+   display: inline-block;
+  background-color: #6a5acd;
+  color: #fff;
+  padding: 0rem 0.5rem;
+  border-radius: 50px;
+  text-align: center;
+  margin: 0.2rem;
+  transition: background-color 0.3s ease; 
+  font-size: 15px;
+}
+
+.buttons{
+  margin-top: 0.5rem;
+}
+.buttons button {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 0rem 0.5rem;
+  border-radius: 50px;
+  border: none;
+  margin: 0.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 15px;
+  margin-right: -0.4rem;
+}
+
+.buttons button:hover {
+  background: #010c22;
+}
+
+.date{
+  text-align: right;
+  font-size: 60%;
+  margin-top: -6%;
+  color: antiquewhite;
+}
+
+.title{
+    font-size: 100%;
+    font-weight: bold;
+    color:aqua;
+
+}
+
+.desc{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+}
+
+.section-title {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 40px; /* adds spacing below heading */
+}

@@ -1,0 +1,90 @@
+
+
+  <section class="projects">
+    <h2 class="section-title">03.My Projects</h2>
+
+    <!-- Projects Grid -->
+    <div class="projects-container">
+      <div class="project-card">
+        <div class="image-container">
+          <img src="images/project1.jpg" alt="Project Image">
+        </div>
+            <p class="date">Updated: Aug 30, 2025</p>
+          <h3 class="title">Portfolio</h3>
+          <p class="desc">This is my personal portfolio website</p>
+          <div class="tags">
+            <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">PHP</span><span class="badge">MySQL</span>
+          </div>
+          <div class="buttons">
+             <button>Live Demo</button>
+             <button>Code</button>
+             <button>Show Case Study</button>
+          </div>
+        </div>
+        <div class="project-card">
+        <img src="images/project1.jpg" alt="Project Image">
+            <p class="date">Updated: Aug 30, 2025</p>
+          <h3 class="title">Portfolio</h3>
+          <p class="desc">This is my personal portfolio website</p>
+          <div class="tags">
+            <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">PHP</span><span class="badge">MySQL</span>
+          </div>
+          <div class="buttons">
+             <button>Live Demo</button>
+             <button>Code</button>
+             <button>Show Case Study</button>
+          </div>
+        </div>
+        <div class="project-card">
+        <img src="images/project1.jpg" alt="Project Image">
+            <p class="date">Updated: Aug 30, 2025</p>
+          <h3 class="title">Portfolio</h3>
+          <p class="desc">This is my personal portfolio website</p>
+          <div class="tags">
+            <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">PHP</span><span class="badge">MySQL</span>
+          </div>
+          <div class="buttons">
+             <button>Live Demo</button>
+             <button>Code</button>
+             <button>Show Case Study</button>
+          </div>
+        </div>
+        <div class="project-card">
+        <img src="images/project1.jpg" alt="Project Image">
+            <p class="date">Updated: Aug 30, 2025</p>
+          <h3 class="title">Portfolio</h3>
+          <p class="desc">This is my personal portfolio website</p>
+          <div class="tags">
+            <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">PHP</span><span class="badge">MySQL</span>
+          </div>
+          <div class="buttons">
+             <button>Live Demo</button>
+             <button>Code</button>
+             <button>Show Case Study</button>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+
+
+  <script>
+  // Function to generate random color
+  function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  // Apply random color to each badge
+  const badges = document.querySelectorAll('.badge');
+  badges.forEach(badge => {
+    badge.style.backgroundColor = getRandomColor();
+  });
+</script>
+
+

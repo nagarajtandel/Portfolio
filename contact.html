@@ -1,0 +1,78 @@
+
+  </div>
+    <section class="contact-section">
+          <h2>04. Get In Touch</h2>
+<div class="box">
+    <div class="contact-box1">
+      <h2 class="section-title">Let's talk about your project</h2>
+      <p>
+        I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll get back to you as soon as possible!
+      </p>
+      <ul class="contact-details">
+        <li><i class="fa-regular fa-envelope"></i> <a href="mailto:nagarajtandelnagaraj@gmail.com">nagarajtandelnagaraj@gmail.com</a></li>
+        <li><i class="fa-solid fa-phone"></i> <a href="tel:+917338653279">+91 7338653279</a></li>
+        <li><i class="fa-solid fa-location-dot"></i> Bangalore, Karnataka, India</li>
+      </ul>
+      <div class="social-icons">
+        <a href="https://github.com/nagarajtandel"><i class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com/nagaraj-tandel"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/nagarajtandel"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://github.com/nagarajtandel"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://github.com/nagarajtandel"><i class="fa-solid fa-globe"></i></a>
+      </div>
+    </div>
+
+    <div class="contact-box2">
+      <form class="contact-form" action="https://formspree.io/f/xblakgeg" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required/>
+        <input type="email" name="email" placeholder="Your Email" required/>
+        <input type="text" name="subject" placeholder="Subject" required/>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+      <p id="form-status" style="color: green; display: none;">Thanks! Your message has been sent.</p>
+
+    </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Nagaraj Tandel. All rights reserved.</p>
+  </footer>
+
+  <script>
+  const form = document.querySelector('.contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const action = form.getAttribute('action');
+
+    try {
+      const response = await fetch(action, {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' }
+      });
+
+      if (response.ok) {
+        status.textContent = "Thanks! Your message has been sent.";
+        status.style.color = "green";
+        status.style.display = "block";
+        form.reset();
+      } else {
+        status.textContent = "Oops! There was a problem submitting your form.";
+        status.style.color = "red";
+        status.style.display = "block";
+      }
+    } catch (error) {
+      status.textContent = "Oops! Something went wrong.";
+      status.style.color = "red";
+      status.style.display = "block";
+    }
+  });
+</script>
+
+
